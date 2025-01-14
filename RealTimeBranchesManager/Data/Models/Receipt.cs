@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace RealTimeBranchesManager.Data.Models;
 
-public class Receipts
+public class Receipt
 {
 	public Guid Id { get; set; }
 	public Guid CashierId { get; set; }

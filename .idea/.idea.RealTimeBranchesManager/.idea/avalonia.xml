@@ -5,6 +5,7 @@
       <map>
         <entry key="RealTimeBranchesManager/App.axaml" value="RealTimeBranchesManager/RealTimeBranchesManager.csproj" />
         <entry key="RealTimeBranchesManager/MainWindow.axaml" value="RealTimeBranchesManager/RealTimeBranchesManager.csproj" />
+        <entry key="RealTimeBranchesManager/Views/Map.axaml" value="RealTimeBranchesManager/RealTimeBranchesManager.csproj" />
       </map>
     </option>
   </component>
