@@ -2,6 +2,7 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using Microsoft.Extensions.DependencyInjection;
+using RealTimeBranchesManager.Services;
 
 namespace RealTimeBranchesManager;
 
@@ -18,7 +19,9 @@ public class App : Application
 			desktop.MainWindow = new MainWindow();
 
 		var serviceCollection = new ServiceCollection();
-		serviceCollection.ContextAc
+
+		ServicesCollectionExtension.AddGeneralServices(serviceCollection);
+		ServicesCollectionExtension.AddDbServices(serviceCollection);
 
 		base.OnFrameworkInitializationCompleted();
 	}

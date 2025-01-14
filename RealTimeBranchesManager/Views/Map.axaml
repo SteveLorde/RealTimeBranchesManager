@@ -6,4 +6,5 @@
         x:Class="RealTimeBranchesManager.Views.Map"
         Title="Map">
     Welcome to Avalonia!
+
 </Window>

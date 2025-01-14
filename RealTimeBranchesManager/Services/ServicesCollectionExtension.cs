@@ -10,7 +10,7 @@ public static class ServicesCollectionExtension
 {
 	public static readonly HttpClient HttpClient = new();
 
-	public static void AddServices(this IServiceCollection services, IConfiguration config)
+	public static void AddGeneralServices(this IServiceCollection services, IConfiguration config)
 	{
 	}
 
