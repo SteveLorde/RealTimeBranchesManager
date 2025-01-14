@@ -14,6 +14,7 @@ public class DataContext : DbContext
 	public DbSet<Employee> Employees { get; set; }
 	public DbSet<Cashier> Cashiers { get; set; }
 	public DbSet<Receipt> Receipts { get; set; }
+	public DbSet<Product> Products { get; set; }
 
 	protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 	{
