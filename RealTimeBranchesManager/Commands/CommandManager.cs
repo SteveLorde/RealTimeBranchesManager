@@ -16,11 +16,23 @@ public class CommandManager : ICommandManager
 
 	public async Task Run()
 	{
-		await Task.Run(() =>
+		try
 		{
-			IsRunning = true;
-			while (IsRunning) TimeCounter += 1;
-		});
+			await Task.Run(async () =>
+			{
+				IsRunning = true;
+				while (IsRunning && !_commandsQueue.IsEmpty)
+				{
+					TimeCounter += 1;
+					_commandsQueue.TryDequeue(out var command);
+					if (command != null) await command.Execute();
+				}
+			});
+		}
+		finally
+		{
+			IsRunning = false;
+		}
 	}
 
 	public async Task<bool> AddCommand(ICommand command)

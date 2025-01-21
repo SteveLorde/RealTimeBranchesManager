@@ -25,6 +25,7 @@
     <ItemGroup>
         <Folder Include="Components\"/>
         <Folder Include="Controllers\"/>
-        <Folder Include="Data\DTO\" />
+        <Folder Include="Data\DTO\"/>
+        <Folder Include="Services\Logger\"/>
     </ItemGroup>
 </Project>
