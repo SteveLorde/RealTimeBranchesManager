@@ -3,6 +3,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using RealTimeBranchesManager.Commands.Model;
 
 namespace RealTimeBranchesManager.Commands;
 
@@ -10,12 +11,16 @@ public class CommandManager : ICommandManager
 {
 	private readonly ConcurrentQueue<ICommand> _commandsQueue = new ConcurrentQueue<ICommand>();
 
-	public bool IsRunning = false;
-	public int TimeCounter = 0;
+	public bool IsRunning;
+	public int TimeCounter;
 
 	public async Task Run()
 	{
-		throw new NotImplementedException();
+		await Task.Run(() =>
+		{
+			IsRunning = true;
+			while (IsRunning) TimeCounter += 1;
+		});
 	}
 
 	public async Task<bool> AddCommand(ICommand command)

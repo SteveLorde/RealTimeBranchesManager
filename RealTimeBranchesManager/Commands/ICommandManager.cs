@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using RealTimeBranchesManager.Commands.Model;
 
 namespace RealTimeBranchesManager.Commands;
 

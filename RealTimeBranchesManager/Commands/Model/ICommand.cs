@@ -1,4 +1,4 @@
-﻿namespace RealTimeBranchesManager.Commands;
+﻿namespace RealTimeBranchesManager.Commands.Model;
 
 public interface ICommand
 {
