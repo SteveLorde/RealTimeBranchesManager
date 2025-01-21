@@ -16,6 +16,8 @@ public static class ICommandJSONUtility
 
 	public static async Task<ICommand> DeSerialize(string serializedCommand)
 	{
+		throw new NotImplementedException("work on polymorphic converter");
+
 		var memoryStream = new MemoryStream(Encoding.UTF8.GetBytes(serializedCommand));
 
 		var command = await JsonSerializer.DeserializeAsync<ICommand>(memoryStream);
